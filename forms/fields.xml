@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<form>
+	<fields addfieldpath="/administrator/components/com_fabrik/models/fields">
+		<fieldset name="plg-element-handsontable" label="COM_FABRIK_DEFAULT">
+
+			<field type="helplink"
+				url="PLG_ELEMENT_HANDSONTABLE_HELP_SERVER" />
+
+			<field name="default"
+				type="fabrikeditor"
+				mode="php"
+				label="PLG_ELEMENT_HANDSONTABLE_DEFAULT_LABEL"
+				/>
+
+			<field name="eval"
+				type="radio"
+				class="radio btn-group"
+				default="0"
+				label="PLG_ELEMENT_HANDSONTABLE_EVAL_LABEL">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+			</field>
+
+		</fieldset>
+	</fields>
+	<fields addfieldpath="/administrator/components/com_fabrik/models/fields" name="params">
+
+		<fieldset label="COM_FABRIK_OPTIONS" name="plg-element-handsontable-params">
+
+			<field type="helplink"
+				url="PLG_ELEMENT_HANDSONTABLE_HELP_SERVER" />
+
+			<field name="h-rows"
+				class="input-mini"
+				default="5"
+				label="PLG_ELEMENT_HANDSONTABLE_ROWS_LABEL"
+				DESCRIPTION="PLG_ELEMENT_HANDSONTABLE_ROWS_DESC"
+				type="text"/>
+
+			<field name="h-cols"
+				type="text"
+				class="input-mini"
+				default="5"
+				description="PLG_ELEMENT_HANDSONTABLE_COLS_DESC"
+				label="PLG_ELEMENT_HANDSONTABLE_COLS_LABEL"/>
+
+			<field name="columns"
+				type="textarea"
+				class="input"
+				description="PLG_ELEMENT_HANDSONTABLE_COLCODE_DESC"
+				label="PLG_ELEMENT_HANDSONTABLE_COLCODE_LABEL"/>
+
+			<field name="mins-rows"
+				type="text"
+				class="input-mini"
+				default="1"
+				description="PLG_ELEMENT_HANDSONTABLE_MINSPARE_DESC"
+				label="PLG_ELEMENT_HANDSONTABLE_MINSPARE_LABEL"/>
+
+			<field name="col-head-data"
+				type="textarea"
+				class="input"
+				description="PLG_ELEMENT_HANDSONTABLE_COLHEADDATA_DESC"
+				label="PLG_ELEMENT_HANDSONTABLE_COLHEADDATA_LABEL"/>
+				
+			<field name="col-head"
+				type="radio"
+				default="true"
+				class="btn-group"
+				description="PLG_ELEMENT_HANDSONTABLE_COLHEADER_DESC"
+				label="PLG_ELEMENT_HANDSONTABLE_COLHEADER_LABEL">
+					<option value="false">JNO</option>
+					<option value="true">JYES</option>
+			</field>
+			<field name="row-head"
+				type="radio"
+				default="false"
+				class="btn-group"
+				description="PLG_ELEMENT_HANDSONTABLE_ROWHEADER_DESC"
+				label="PLG_ELEMENT_HANDSONTABLE_ROWHEADER_LABEL">
+					<option value="false">JNO</option>
+					<option value="true">JYES</option>
+			</field>
+			<field name="con-menu"
+				type="radio"
+				default="true"
+				class="btn-group"
+				description="PLG_ELEMENT_HANDSONTABLE_CONTEXTMENU_DESC"
+				label="PLG_ELEMENT_HANDSONTABLE_CONTEXTMENU_LABEL">
+					<option value="false">JNO</option>
+					<option value="true">JYES</option>
+			</field>
+			<field name="col-sort"
+				type="radio"
+				default="false"
+				class="btn-group"
+				description="PLG_ELEMENT_HANDSONTABLE_COLSORT_DESC"
+				label="PLG_ELEMENT_HANDSONTABLE_COLSORT_LABEL">
+					<option value="false">JNO</option>
+					<option value="true">JYES</option>
+			</field>
+			<field name="col-move"
+				type="radio"
+				default="false"
+				class="btn-group"
+				description="PLG_ELEMENT_HANDSONTABLE_COLMOVE_DESC"
+				label="PLG_ELEMENT_HANDSONTABLE_COLMOVE_LABEL">
+					<option value="false">JNO</option>
+					<option value="true">JYES</option>
+			</field>
+
+			<field name="col-resize"
+				type="radio"
+				default="false"
+				class="btn-group"
+				description="PLG_ELEMENT_HANDSONTABLE_COLRESIZE_DESC"
+				label="PLG_ELEMENT_HANDSONTABLE_COLRESIZE_LABEL">
+					<option value="false">JNO</option>
+					<option value="true">JYES</option>
+			</field>
+
+		</fieldset>
+
+	</fields>
+</form>

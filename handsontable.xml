@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<extension group="fabrik_element" method="upgrade" type="plugin" version="30">
+	<name>plg_fabrik_element_handsontable</name>
+	<author>Navjinder Kainthrai</author>
+	<creationDate>May 2014</creationDate>
+	<copyright>Copyright (C) 014 navjinder.com - All rights reserved.</copyright>
+	<license>GNU/GPL http://www.gnu.org/copyleft/gpl.html</license>
+	<authorEmail>navjinder8@gmail.com</authorEmail>
+	<authorUrl>www.navjinder.com</authorUrl>
+	<version>1.0.0</version>
+	<help url="PLG_ELEMENT_HANDSONTABLE_HELP_SERVER"/>
+	<description>PLG_ELEMENT_HANDSONTABLE_DESCRIPTION</description>
+	<files>
+		<filename plugin="handsontable">handsontable.php</filename>
+		<filename>index.html</filename>
+		<filename>jquery.handsontable.js</filename>
+		<filename>jquery.handsontable.full.js</filename>
+		<filename>jquery.handsontable.full.css</filename>
+		<filename>jquery.handsontable.css</filename>
+		<folder>forms</folder>
+		<folder>language</folder>
+	</files>
+		
+</extension>
