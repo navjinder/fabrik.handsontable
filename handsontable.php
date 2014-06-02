@@ -79,6 +79,7 @@ class PlgFabrik_ElementHandsontable extends PlgFabrik_Element
 		$columns = (string) $params->get('columns');
 		$colheaddata = (string) $params->get('col-head-data');
 		$minsrows = (int) $params->get('mins-rows', 1);
+		$minscols = (int) $params->get('mins-cols', 0);
 		$colhead = (string) $params->get('col-head', "true");
 		$rowhead = (string) $params->get('row-head', "false");
 		$conmenu = (string) $params->get('con-menu', "true");
@@ -101,7 +102,7 @@ class PlgFabrik_ElementHandsontable extends PlgFabrik_Element
 		$str = array();
 		//$str[] = '<script src="' . COM_FABRIK_LIVESITE  .'media/com_fabrik/js/element.js"></script>';
 		$str[] = '<script src="' . COM_FABRIK_LIVESITE  .'plugins/fabrik_element/handsontable/handsontable.js"></script>';
-		$str[] = '<a class="reset-state btn btn-small" href="javascript:none;"> <span class="icon-refresh"></span> Reset</a>';
+		if(($colsort == "true")|| ($colmove == "true")||($colresize == "true")){$str[] = '<a class="reset-state btn btn-small" href="javascript:none;"> <span class="icon-refresh"></span> Reset</a>';}
 		$str[] = '<div id="hand' . $id . '" class="fabrikSubElementContainer">';
 		//FabrikHelperHTML::addPath(COM_FABRIK_BASE . 'plugins/fabrik_element/slider/images/', 'image', 'form', false);
 
@@ -154,6 +155,7 @@ class PlgFabrik_ElementHandsontable extends PlgFabrik_Element
 		$str[] = 'colHeaders: ' . $colhead . ',';
 		$str[] = 'rowHeaders: ' . $rowhead . ',';
 		$str[] = 'minSpareRows: ' . $minsrows . ',';
+		$str[] = 'minSpareCols: ' . $minscols . ',';
 		$str[] = 'contextMenu: ' . $conmenu . ',';
 		$str[] = 'columnSorting: ' . $colsort . ',';
 		$str[] = 'manualColumnMove: ' . $colmove . ',';

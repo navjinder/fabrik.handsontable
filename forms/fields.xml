@@ -56,6 +56,13 @@
 				default="1"
 				description="PLG_ELEMENT_HANDSONTABLE_MINSPARE_DESC"
 				label="PLG_ELEMENT_HANDSONTABLE_MINSPARE_LABEL"/>
+				
+			<field name="mins-cols"
+				type="text"
+				class="input-mini"
+				default="0"
+				description="PLG_ELEMENT_HANDSONTABLE_MINSPARECOLS_DESC"
+				label="PLG_ELEMENT_HANDSONTABLE_MINSPARECOLS_LABEL"/>
 
 			<field name="col-head-data"
 				type="textarea"
