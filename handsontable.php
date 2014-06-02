@@ -115,10 +115,11 @@ class PlgFabrik_ElementHandsontable extends PlgFabrik_Element
 				}
 				
 				else{
-				
+				$stringoutside= "";
+				$stringinside = "" ;
 				 for($i=1;$i<$hrows;$i++){
 						
-						$stringinside = "" ;
+						
 		
 								
 								for($j=1;$j<$hcols;$j++){
