@@ -118,7 +118,7 @@ class PlgFabrik_ElementHandsontable extends PlgFabrik_Element
 				else{
 				$stringoutside= "";
 				$stringinside = "" ;
-				 for($i=1;$i<$hrows;$i++){
+				
 						
 						
 		
@@ -131,7 +131,7 @@ class PlgFabrik_ElementHandsontable extends PlgFabrik_Element
 						
 						$stringoutside = $stringoutside . "[" . $stringinside . "\"\"],";
 						
-						}
+						
 						$stringwhole = "[" . substr($stringoutside,0,-1) . "]"; 
 						
 						$val = 	$stringwhole;
@@ -139,7 +139,7 @@ class PlgFabrik_ElementHandsontable extends PlgFabrik_Element
 				 }
 			}
 		
-		elseif ($val) { $val = print_r(json_encode($val), TRUE); }
+		elseif ($val) { $val = print_r($val, TRUE); }
 		
 		if(!$columns){ $columns = "["; for($k=1;$k<$hcols;$k++)  { $columns .= "&#123; &#125;,"; } $columns .= "&#123; &#125;]"; $columns = html_entity_decode($columns);}
 		if(($colhead == "true") && ($colheaddata)){ $colhead = $colheaddata;}
@@ -163,6 +163,9 @@ class PlgFabrik_ElementHandsontable extends PlgFabrik_Element
 		$str[] = 'columns: ' . $columns . ',';
 		$str[] = 'persistentState: true ,';
 		$str[] = 'afterChange: function(){';
+		//$str[] = 'console.log("Updating Text area save' . $id . '");';
+		//$str[] = 'var printthis = jQuery("#hand' . $id . '").handsontable("getData");';
+		//$str[] = 'console.log(printthis);';
 		$str[] = 'var tmpData' .$id. ' = jQuery.extend(true, [], data' . $id . ');';
 		//$str[] = 'var tmpData2' .$id. ' = JSON.stringify(tmpData' . $id . ').replace(/\'/g,"&quot;").replace(/(\"d+\")/g, \'$1\');';
 		$str[] = 'var tmpData2' .$id. ' = JSON.stringify(tmpData' . $id . ');';

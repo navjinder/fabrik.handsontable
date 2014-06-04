@@ -14588,11 +14588,8 @@ Dragdealer.prototype =
         });
     }
 }).call(this);
-
-
-
  
-FbHansontable1 = new Class({
+/* FbHansontable = new Class({
 
 	Extends: FbElement,
 	initialize: function (element, options) {
@@ -14603,5 +14600,5 @@ FbHansontable1 = new Class({
 
 	
 
-}); 
+});  */
  
