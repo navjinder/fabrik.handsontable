@@ -16,7 +16,7 @@ var Handsontable = { //class namespace
   helper: {} //helper namespace
 };
 
-(function ($, window, Handsontable) {
+require(['jquery'],(function ($, window, Handsontable) {
   "use strict";
 //http://stackoverflow.com/questions/3629183/why-doesnt-indexof-work-on-an-array-ie8
 if (!Array.prototype.indexOf) {
@@ -13963,18 +13963,7 @@ Dragdealer.prototype =
  * Requires: 1.2.2+
  */
 
-(function (factory) {
-    if ( typeof define === 'function' && define.amd ) {
-        // AMD. Register as an anonymous module.
-        define(['jquery'], factory);
-    } else if (typeof exports === 'object') {
-        // Node/CommonJS style for Browserify
-        module.exports = factory;
-    } else {
-        // Browser globals
-        factory(jQuery);
-    }
-}(function ($) {
+require(['jquery'],(function ($) {
 
     var toFix = ['wheel', 'mousewheel', 'DOMMouseScroll', 'MozMousePixelScroll'];
     var toBind = 'onwheel' in document || document.documentMode >= 9 ? ['wheel'] : ['mousewheel', 'DomMouseScroll', 'MozMousePixelScroll'];
@@ -14069,7 +14058,7 @@ Dragdealer.prototype =
 
 }));
 
-})(jQuery, window, Handsontable);
+})(jQuery, window, Handsontable));
 // numeral.js
 // version : 1.4.7
 // author : Adam Draper
@@ -14583,13 +14572,16 @@ Dragdealer.prototype =
 
     /*global define:false */
     if (typeof define === 'function' && define.amd) {
-        define([], function () {
+        require(['jquery'], function () {
             return numeral;
         });
     }
 }).call(this);
+
+
+/* 
  
-/* FbHansontable = new Class({
+FbHansontable1 = new Class({
 
 	Extends: FbElement,
 	initialize: function (element, options) {
