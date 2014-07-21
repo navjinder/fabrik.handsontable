@@ -78,6 +78,7 @@ class PlgFabrik_ElementHandsontable extends PlgFabrik_Element
 		$hcols = (int) $params->get('h-cols', 5);
 		$columns = (string) $params->get('columns');
 		$colheaddata = (string) $params->get('col-head-data');
+		$conmenudata = (string) $params->get('con-menu-data');
 		$minsrows = (int) $params->get('mins-rows', 1);
 		$minscols = (int) $params->get('mins-cols', 0);
 		$colhead = (string) $params->get('col-head', "true");
@@ -143,6 +144,7 @@ class PlgFabrik_ElementHandsontable extends PlgFabrik_Element
 		
 		if(!$columns){ $columns = "["; for($k=1;$k<$hcols;$k++)  { $columns .= "&#123; &#125;,"; } $columns .= "&#123; &#125;]"; $columns = html_entity_decode($columns);}
 		if(($colhead == "true") && ($colheaddata)){ $colhead = $colheaddata;}
+		if(($conmenu == "true") && ($conmenudata)){ $conmenu = $conmenudata;}
 		//$str[] = '<pre>'.print_r($options).'</pre>';
 		$valueprinted = $val;
 		$str[] = '<script>';

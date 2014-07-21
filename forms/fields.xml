@@ -97,6 +97,11 @@
 					<option value="false">JNO</option>
 					<option value="true">JYES</option>
 			</field>
+			<field name="con-menu-data"
+				type="textarea"
+				class="input"
+				description="PLG_ELEMENT_HANDSONTABLE_CONTEXTMENUDATA_DESC"
+				label="PLG_ELEMENT_HANDSONTABLE_CONTEXTMENUDATA_LABEL"/>
 			<field name="col-sort"
 				type="radio"
 				default="false"
